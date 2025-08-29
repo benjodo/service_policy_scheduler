@@ -1,0 +1,8 @@
+# Aptible autoscaling policy scheduler
+# Times are in Central Time (container timezone is set to America/Chicago)
+
+# Scale up for busy hours: 8 AM Central, Monday-Friday
+0 8 * * 1-5 /app/autoscaling.sh busy
+
+# Scale down for off hours: 8 PM Central, Monday-Friday  
+0 20 * * 1-5 /app/autoscaling.sh off
