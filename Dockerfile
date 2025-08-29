@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     ca-certificates \
     tzdata \
+    jq \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Aptible CLI
